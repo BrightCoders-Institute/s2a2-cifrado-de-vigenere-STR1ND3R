@@ -2,16 +2,22 @@
 
 # Cifrado de Vigenere
 
-> [Ver instrucciones antes de iniciar](./instructions.md)
+# Description.
 
-This README would normally document whatever steps are necessary to get the application up and running.
+Encrypt and decrypt messages with vigenere cipher
 
-Things you may want to cover:
+# How to Use the Project.
 
-- Title or Project Name
-- Table of contents
-- Description. A brief description of what the project is about
-- How to Install and Run the Project.
-- How to Use the Project.
-- Credits
-- Badges
+In your terminal run:
+
+```bash
+git clone git@github.com:BrightCoders-Institute/s2a2-cifrado-de-vigenere-STR1ND3R.git
+```
+
+```bash
+cd s2a2-cifrado-de-vigenere-STR1ND3R
+```
+
+```bash
+ruby main.rb
+```
