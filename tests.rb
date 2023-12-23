@@ -1,7 +1,7 @@
 # frozen_string_literal: false
 
 require 'minitest/autorun'
-require_relative 'vigenere'
+require_relative './vigenere/vigenere'
 
 # vigenere class testing
 class TestVigenere < Minitest::Test

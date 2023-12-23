@@ -1,13 +1,12 @@
 # frozen_string_literal: false
 
 require_relative 'vigenere_table'
-
 # cipher and decipher a string with the vigenere method
-class Vigenere
+class Vigenere < VigenereTable
   def initialize
     @alphabet = ('a'..'z').to_a
     alphabet.insert(14, 'ñ')
-    @table = VigenereTable.new(@alphabet)
+    super(@alphabet)
   end
   attr_reader :alphabet, :table
 
@@ -15,8 +14,8 @@ class Vigenere
     message, key = format(message, key)
     message.each do |h|
       h.split('').each_with_index do |letter, i|
-        @table.table.each do |j|
-          h[i] = j[@table.table[0].find_index(letter)] if j[0] == key[i]
+        @table.each do |j|
+          h[i] = j[@table[0].find_index(letter)] if j[0] == key[i]
         end
       end
     end
@@ -27,8 +26,8 @@ class Vigenere
     message, key = format(message, key)
     message.each do |h|
       h.split('').each_with_index do |letter, i|
-        @table.table.each do |j|
-          h[i] = @table.table[0][j.find_index(letter)] if j[0] == key[i]
+        @table.each do |j|
+          h[i] = @table[0][j.find_index(letter)] if j[0] == key[i]
         end
       end
     end
