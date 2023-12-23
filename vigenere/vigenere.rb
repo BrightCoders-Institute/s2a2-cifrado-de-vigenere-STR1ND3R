@@ -35,6 +35,8 @@ class Vigenere < VigenereTable
   end
 
   def format(message, key)
+    message.downcase!
+    key.downcase!
     key.gsub!(' ', '')
     key += key while key.length < message.length
     message.strip!
